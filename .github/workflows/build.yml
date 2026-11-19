@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     container: ps2dev/ps2dev:latest
     steps:
+      - name: Instalar ferramentas
+        run: apk add --no-cache make git
+
       - uses: actions/checkout@v4
 
       - name: Compilar
